@@ -34,7 +34,7 @@ export default async function Hero() {
             width={1280}
             loading="eager"
             sizes="100vw"
-            className="object-cover h-64 md:h-[32rem] hover:scale-102 transition duration-300"
+            className="object-cover h-64 md:h-[32rem] hover:scale-105 transition duration-300"
           />
           <div>
             <h1 className="text-xl font-bold text-gray-800">
