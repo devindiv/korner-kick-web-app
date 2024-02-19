@@ -6,7 +6,7 @@ interface navbarRoutes {
 const routes: navbarRoutes[] = [
   { label: "Transfers", href: "/transfers" },
   { label: "Premiere League", href: "/premiere-league" },
-  { label: "La Liga", href: "/la-liga" },
+  { label: "Champions League", href: "/champions-league" },
 ];
 
 export { routes };
