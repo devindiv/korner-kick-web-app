@@ -1,3 +1,4 @@
+import { RichTextComponents } from "@/components/RichTextComponent";
 import Container from "@/components/ui/container";
 import { singlePost } from "@/lib/interface";
 import { client, urlFor } from "@/lib/sanity";
@@ -28,7 +29,7 @@ export default async function singlePost({
   const data: singlePost = await getSinglePost(params.slug);
   return (
     <Container>
-      <div className="px-4 py-3 flex flex-col items-center space-y-4">
+      <div className="px-4 py-3 flex flex-col items-center justify-center space-y-4">
         <h1 className="text-brand-primary mb-3 mt-2 text-center text-xl font-bold dark:text-white lg:text-3xl lg:leading-snug">
           {data.title}
         </h1>
@@ -44,9 +45,7 @@ export default async function singlePost({
             className="object-cover"
           />
         </div>
-        <article>
-          <PortableText value={data.content} />
-        </article>
+        <PortableText value={data.content} components={RichTextComponents} />
       </div>
     </Container>
   );

@@ -17,3 +17,13 @@ export interface singlePost {
   titleImage: any;
   content: any;
 }
+
+export interface categoryList {
+  title: string;
+  slug: string;
+}
+
+export interface clubList {
+  name: string;
+  slug: string;
+}

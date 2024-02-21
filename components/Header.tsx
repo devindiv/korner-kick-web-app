@@ -1,17 +1,19 @@
-"use client";
-
 import { routes } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 import Container from "./ui/container";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Menu } from "lucide-react";
+import DesktopNav from "./desktop-nav";
+import { getCategories, getClubs } from "@/lib/actions";
+import { categoryList, clubList } from "@/lib/interface";
 
-const Header = () => {
-  const pathname = usePathname();
+const Header = async () => {
+  const categories: categoryList[] = await getCategories();
+  const clubs: categoryList[] = await getClubs();
+
   return (
     <header className="sticky top-0 z-10 bg-gray-50 sm:flex sm:justify-between py-3 px-4 border-b">
       <Container>
@@ -26,7 +28,8 @@ const Header = () => {
               />
             </Link>
           </div>
-          <nav className="mx-6 items-center space-x-4 lg:space-x-6 hidden md:block">
+          <DesktopNav clubs={clubs} categories={categories} />
+          {/*<nav className="mx-6 items-center space-x-4 lg:space-x-6 hidden md:block">
             {routes.map((route, index) => (
               <Button key={index} asChild variant="ghost">
                 <Link
@@ -51,7 +54,7 @@ const Header = () => {
                 ))}
               </nav>
             </SheetContent>
-          </Sheet>
+          </Sheet>*/}
         </div>
       </Container>
     </header>

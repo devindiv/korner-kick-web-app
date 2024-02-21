@@ -5,7 +5,7 @@ export async function getPosts() {
       title,
         "currentSlug": slug.current,
         category,
-        shortDescription,
+        excerpt,
         content,
         tags,
         titleImage,
@@ -23,7 +23,7 @@ export async function getFeaturedPosts() {
         "currentSlug": slug.current,
         category,
         content,
-        shortDescription,
+        excerpt,
         titleImage,
     }
     `;

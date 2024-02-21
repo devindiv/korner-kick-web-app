@@ -9,7 +9,6 @@ export async function getPosts() {
         category,
         shortDescription,
         content,
-        tags,
         titleImage,
     }
     `;

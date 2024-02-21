@@ -14,5 +14,20 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+
+    templates: (prev) => {
+      const categoryChild = {
+        id: 'category-child',
+        title: 'Category: Child',
+        schemaType: 'category',
+        parameters: [{name: `parentId`, title: `Parent ID`, type: `string`}],
+        // This value will be passed-in from desk structure
+        value: ({parentId}: {parentId: string}) => ({
+          parent: {_type: 'reference', _ref: parentId},
+        }),
+      }
+
+      return [...prev, categoryChild]
+    },
   },
 })

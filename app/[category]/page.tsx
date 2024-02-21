@@ -5,8 +5,10 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 30;
+
 async function getData(category: string) {
-  const query = `*[_type == "post" && category->name == '${category}'] {
+  const query = `*[_type == "post" && (category->slug.current == "${category}" || category->parent->slug.current == "${category}")] | order(_createdAt desc) {
         _id,
         titleImage,
         title,

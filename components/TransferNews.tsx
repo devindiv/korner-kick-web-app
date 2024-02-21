@@ -33,9 +33,9 @@ export default async function TransferNews() {
               >
                 <Image
                   src={urlFor(post.titleImage).url()}
+                  alt="transfers image"
                   width={400}
                   height={400}
-                  alt="transfer image"
                   className="w-36 h-48 object-cover"
                 />
                 <div className="my-3  hover:text-orange-500/2">
