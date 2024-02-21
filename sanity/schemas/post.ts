@@ -108,7 +108,6 @@ export default defineType({
       name: 'category',
       type: 'reference',
       to: [{type: 'category'}],
-      options: {filter: 'defined(parent)'},
     }),
     defineField({
       name: 'featured',

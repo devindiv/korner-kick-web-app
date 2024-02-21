@@ -9,6 +9,7 @@ import { Menu } from "lucide-react";
 import DesktopNav from "./desktop-nav";
 import { getCategories, getClubs } from "@/lib/actions";
 import { categoryList, clubList } from "@/lib/interface";
+import MobileNav from "./mobile-nav";
 
 const Header = async () => {
   const categories: categoryList[] = await getCategories();
@@ -29,6 +30,8 @@ const Header = async () => {
             </Link>
           </div>
           <DesktopNav clubs={clubs} categories={categories} />
+
+          <MobileNav clubs={clubs} categories={categories} />
           {/*<nav className="mx-6 items-center space-x-4 lg:space-x-6 hidden md:block">
             {routes.map((route, index) => (
               <Button key={index} asChild variant="ghost">
