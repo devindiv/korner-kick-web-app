@@ -4,8 +4,8 @@ interface navbarRoutes {
 }
 
 const routes: navbarRoutes[] = [
-  { label: "Transfers", href: "/wwe" },
-  { label: "Premiere League", href: "/aew" },
+  { label: "Transfers", href: "/transfers" },
+  { label: "Premiere League", href: "/premiere-league" },
   { label: "La Liga", href: "/la-liga" },
 ];
 

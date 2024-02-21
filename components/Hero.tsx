@@ -32,6 +32,9 @@ export default async function Hero() {
             alt="featured Post"
             height={720}
             width={1280}
+            loading="eager"
+            sizes="100vw"
+            className="object-cover h-64 md:h-[32rem] hover:scale-105 transition duration-300"
           />
           <div>
             <h1 className="text-xl font-bold text-gray-800">
