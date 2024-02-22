@@ -14,24 +14,25 @@ import MobileNav from "./mobile-nav";
 const Header = async () => {
   const categories: categoryList[] = await getCategories();
   const clubs: categoryList[] = await getClubs();
-
   return (
-    <header className="sticky top-0 z-10 bg-gray-50 sm:flex sm:justify-between py-3 px-4 border-b">
+    <header className="sticky top-0 z-10 bg-gray-50 sm:flex sm:justify-between py-3 border-b">
       <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between w-full">
+        <div className="relative px-4 flex h-16 items-center justify-between w-full">
           <div className="flex items-center">
-            <Link href="/" className="ml-4 lg:ml-0">
+            <Link href="/" className="">
               <Image
                 src="/kornerkick-alternate.svg"
                 alt="navbar logo"
-                width={180}
-                height={80}
+                width={400}
+                height={400}
+                className="w-48 md:w-56"
               />
             </Link>
           </div>
           <DesktopNav clubs={clubs} categories={categories} />
 
           <MobileNav clubs={clubs} categories={categories} />
+
           {/*<nav className="mx-6 items-center space-x-4 lg:space-x-6 hidden md:block">
             {routes.map((route, index) => (
               <Button key={index} asChild variant="ghost">

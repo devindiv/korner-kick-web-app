@@ -27,15 +27,20 @@ export default async function Hero() {
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-3 px-3 py-4 gap-3">
         <div className="col-span-2 space-y-4">
-          <Image
-            src={urlFor(featuredPost.titleImage).url()}
-            alt="featured Post"
-            height={720}
-            width={1280}
-            loading="eager"
-            sizes="100vw"
-            className="object-cover h-64 md:h-[32rem] hover:scale-105 transition duration-300"
-          />
+          <div
+            className="mx-auto aspect-auto
+           max-w-screen-lg overflow-hidden h-64 md:h-[32rem] lg:rounded-lg"
+          >
+            <Image
+              src={urlFor(featuredPost.titleImage).url()}
+              alt="featured Post"
+              height={720}
+              width={1280}
+              loading="eager"
+              sizes="100vw"
+              className="object-cover w-full h-full hover:scale-105 transition duration-300"
+            />
+          </div>
           <div>
             <h1 className="text-xl font-bold text-gray-800">
               {featuredPost.title}
