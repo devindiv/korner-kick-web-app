@@ -5,7 +5,7 @@ import Link from "next/link";
 import Container from "./ui/container";
 
 export async function getData() {
-  const query = `*[_type == 'post' && featured != true && category->name == 'transfers' ] | order(_createdAt desc) [0..2] {
+  const query = `*[_type == 'post' && featured != true && category->title == 'transfers' ] | order(_createdAt desc) [0..2] {
     title,
     "currentSlug": slug.current,
     category->{name}, // Selecting the category information
