@@ -35,8 +35,8 @@ export default async function Hero() {
               src={urlFor(featuredPost.titleImage).url()}
               alt="featured Post"
               height={720}
-              width={1280}
-              loading="eager"
+              width={820}
+              priority
               sizes="100vw"
               className="object-cover w-full h-full hover:scale-105 transition duration-300"
             />

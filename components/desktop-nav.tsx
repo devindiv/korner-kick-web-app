@@ -33,7 +33,7 @@ export default function DesktopNav({
               <ul className="grid gap-3 p-4 w-96 lg:grid-cols-[.75fr_1fr] capitalize text-md font-semibold">
                 {clubs.map((club, i) => (
                   <li key={i}>
-                    <Link href={`${club.slug}`}>{club.title}</Link>
+                    <Link href={`/${club.slug}`}>{club.title}</Link>
                   </li>
                 ))}
               </ul>
