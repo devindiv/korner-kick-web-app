@@ -28,15 +28,11 @@ export default async function singlePost({
 }) {
   const data: singlePost = await getSinglePost(params.slug);
   return (
-    <div className="px-4 w-screen">
-      <PortableText value={data.content} components={RichTextComponents} />
-    </div>
-    /*<Container>
-      <div className="px-4 py-3 flex flex-col items-center justify-center space-y-4">
+    <Container>
+      <div className="px-4 overflow-hidden flex flex-col">
         <h1 className="text-brand-primary mb-3 mt-2 text-center text-xl font-bold dark:text-white lg:text-3xl lg:leading-snug">
           {data.title}
         </h1>
-
         <div className=" mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
           <Image
             src={urlFor(data.titleImage).url()}
@@ -48,8 +44,18 @@ export default async function singlePost({
             className="object-cover"
           />
         </div>
-        <PortableText value={data.content} components={RichTextComponents} />
+        <div className="py-4 md:px-36 md:py-10">
+          <PortableText value={data.content} components={RichTextComponents} />
+        </div>
       </div>
-  </Container>*/
+    </Container>
+    /*<Container>
+      <div className="px-4 py-3  items-center justify-center space-y-4">
+        
+
+        
+        
+      </div>
+    </Container>*/
   );
 }
