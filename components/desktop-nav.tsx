@@ -26,14 +26,19 @@ export default function DesktopNav({
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="uppercase">
+            <NavigationMenuTrigger className="uppercase text-sm font-semibold text-gray-800">
               Clubs
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 w-96 lg:grid-cols-[.75fr_1fr] capitalize text-md font-semibold">
+              <ul className="p-4 grid grid-cols-2 gap-2 w-[32rem]">
                 {clubs.map((club, i) => (
                   <li key={i}>
-                    <Link href={`/${club.slug}`}>{club.title}</Link>
+                    <Link
+                      href={`/${club.slug}`}
+                      className="text-sm text-gray-600"
+                    >
+                      {club.title}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -46,7 +51,7 @@ export default function DesktopNav({
         <Button key={id} asChild variant="ghost">
           <Link
             href={`/${category.slug}`}
-            className="text-md font-medium transition-colors uppercase"
+            className="text-md font-semibold text-gray-800 transition-colors uppercase"
           >
             {category.title}
           </Link>
