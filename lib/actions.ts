@@ -11,7 +11,7 @@ export async function getCategories() {
   return data;
 }
 export async function getClubs() {
-  const query = `*[_type == "category" && defined(parent) == true] {
+  const query = `*[_type == "category" && defined(parent) == true] | order(_createdAt asc) {
     title,
     "slug": slug.current
   }`;
