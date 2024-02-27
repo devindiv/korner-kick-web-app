@@ -3,9 +3,9 @@ import post from '../schemas/post'
 import parentChild from '../parentChild'
 import {StructureResolver} from 'sanity/desk'
 import blockContent from '../schemas/blockContent'
+import twitter from '../schemas/twitter'
 
-export const schemaTypes = [post, category, blockContent]
-
+export const schemaTypes = [post, category, twitter]
 export const structure: StructureResolver = (S, context) =>
   S.list()
     .title('Content')

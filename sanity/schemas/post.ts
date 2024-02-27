@@ -102,7 +102,15 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Body',
-      type: 'blockContent',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'twitter',
+        },
+      ],
     }),
     defineField({
       name: 'category',

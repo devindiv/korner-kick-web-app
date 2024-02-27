@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { urlFor } from "@/lib/sanity";
+import { Tweet } from "react-tweet";
 
 export const RichTextComponents = {
   types: {
@@ -14,6 +15,9 @@ export const RichTextComponents = {
           />
         </div>
       );
+    },
+    twitter: ({ value }: any) => {
+      return <Tweet id={value.id} />;
     },
   },
   list: {
