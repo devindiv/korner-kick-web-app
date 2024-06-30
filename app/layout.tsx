@@ -8,9 +8,11 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Korner Kick",
-  description:
-    "Korner Kick: Your Premier Source for Football News & Updates. Stay Ahead with the Latest Scores, Highlights, Transfers, and Analysis!",
+  title: {
+    default: "Korner Kick: Greatest Sports News for you",
+    template: "%s - Korner Kick",
+  },
+  description: "Best sports news for the most reliable sources",
 };
 
 export default function RootLayout({
@@ -20,6 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8338403329746838"
+        crossOrigin="anonymous"
+      ></script>
+      <meta
+        name="google-adsense-account"
+        content="ca-pub-8338403329746838"
+      ></meta>
       <body className={inter.className}>
         <Header />
         <main className="min-h-screen">{children}</main>
