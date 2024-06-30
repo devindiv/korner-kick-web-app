@@ -13,6 +13,7 @@ export default function Footer() {
             height={90}
           />
         </Link>
+        <a href="/privacy">Privacy Policy</a>
         <p className="text-xs">
           Copyright &copy; KornerKick 2024 all rights reserved
         </p>
